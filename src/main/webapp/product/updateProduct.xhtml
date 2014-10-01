@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html" 
+	  xmlns:osms="http://java.sun.com/jsf/composite/osms"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<ui:composition template="/template.xhtml">
+		<ui:define name="title">Search Products</ui:define>
+		<ui:define name="content">
+		
+			<osms:menu actived1="active" actived2="inactive"
+					   name1="Insert Product" name2="Search Product"
+					   link1="../product/newProduct.xhtml" link2="../product/searchProduct.xhtml" />
+			<body>
+				<h1 class="page-header">Search Product</h1>
+				<h:form styleClass="form-horizontal">
+				
+					<osms:productComp productCategory="#{searchProduct}"
+											  product="#{searchProduct.product}" />
+		<!-- 			 Category: -->
+		<!-- 			 <h:selectOneMenu styleClass="form-control" -->
+		<!--     							 value="#{searchProduct.categoryId}"> -->
+		<!--     							 <f:selectItem itemLabel="#{null}"></f:selectItem> -->
+		<!--     				<f:selectItems value="#{searchProduct.categories}"  -->
+		<!--     								var="category" -->
+		<!--     								itemLabel="#{category.name}" -->
+		<!--     								itemValue="#{category.id}" -->
+		<!--     								/> -->
+		<!--     			</h:selectOneMenu> -->
+		<!--     			<br /> -->
+		<!-- 			 Product Name:  -->
+		<!-- 			<h:inputText value="#{searchProduct.product.name}" /> -->
+		<!-- 			<br /> -->
+		<!-- 			Product Description:  -->
+		<!-- 			<h:inputTextarea value="#{searchProduct.product.description}" /> -->
+		<!-- 			<br /> -->
+		<!-- 			Price:  -->
+		<!-- 			<h:inputText value="#{searchProduct.product.price}" /> -->
+		<!-- 			<br /> -->
+					
+					<h:commandButton value="Update" action="#{searchProduct.updateProduct}"/>
+					<br />
+					#{newProduct.categoryId}
+				</h:form>
+				<h:messages>
+				</h:messages>
+			</body>
+		</ui:define>
+	</ui:composition>
+</html>

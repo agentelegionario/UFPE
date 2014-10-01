@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html" 
+	  xmlns:category="http://java.sun.com/jsf/composite/category"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	 xmlns:osms="http://java.sun.com/jsf/composite/osms">
+	<ui:composition template="/template.xhtml">
+		<ui:define name="title">Update Category</ui:define>
+		<ui:define name="content">
+		
+		<osms:menu actived1="active" actived2="inactive"
+			  name1="Insert Category" name2="Search Category"
+			  link1="../category/NewCategory.xhtml" link2="../category/searchCategory.xhtml" />
+		<body>
+			<h1 class="page-header">Update Category</h1>
+			<h:form styleClass="form-horizontal">
+				<osms:categoryComp categoryName="#{searchCategory.category}" categoryInherit="#{searchCategory}" />
+<!-- 				<h:inputText value="#{searchCategory.category.name}" /> -->
+				<div class="col-sm-offset-2 col-sm-10">
+					<h:commandButton styleClass="btn btn-info" value="Update" action="#{searchCategory.updateCategory}"/>
+					<h:button type="submit" class="btn" value="Back" outcome="searchCategory"
+							  style="margin-left: 10px" />
+				</div>
+				<br />
+				<br />
+			</h:form>
+			<h:messages errorClass="list-group-item list-group-item-danger"
+					infoClass="list-group-item list-group-item-info"
+					warnClass="list-group-item list-group-item-warning"/>
+		</body>
+		</ui:define>
+	</ui:composition>
+</html>

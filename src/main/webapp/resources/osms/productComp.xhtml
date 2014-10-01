@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html" 
+	  xmlns:f="http://xmlns.jcp.org/jsf/core"
+	  xmlns:composite="http://java.sun.com/jsf/composite">
+	<composite:interface>
+		<composite:attribute name="productCategory" />
+		<composite:attribute name="product" />
+		<composite:attribute name="disabled" />
+	</composite:interface>
+	<composite:implementation>
+		<div class="form-group">
+		<label for="selectCat" class="col-sm-2 control-label">Category:</label>						
+			<div class="col-sm-9">
+			 	<h:selectOneMenu id="selectCat" styleClass="form-control"
+    							 value="#{cc.attrs.productCategory.categoryId}">
+    							 <f:selectItem itemLabel="#{null}"></f:selectItem>
+    				<f:selectItems value="#{cc.attrs.productCategory.categories}" 
+    								var="category"
+    								itemLabel="#{category.name}"
+    								itemValue="#{category.id}"
+    								/>
+    			</h:selectOneMenu>
+    		</div>
+    	</div>
+	    <div class="form-group">
+			<label for="name" class="col-sm-2 control-label">Product Name: </label>						
+			<div class="col-sm-9">
+					<h:inputText styleClass="form-control" id="name" value="#{cc.attrs.product.name}"  />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="ds" class="col-sm-2 control-label">Product Description:</label>						
+			<div class="col-sm-9">
+				<h:inputTextarea styleClass="form-control" id="ds" value="#{cc.attrs.product.description}" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="price" class="col-sm-2 control-label">Price:</label>						
+			<div class="col-sm-9">
+				<h:inputText styleClass="form-control" id="price" value="#{cc.attrs.product.price}" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="image" class="col-sm-2 control-label">Photo:</label>						
+			<div class="col-sm-9">
+				<h:inputText styleClass="form-control" id="image" value="#{cc.attrs.product.image}"></h:inputText>
+			</div>
+		</div>
+	</composite:implementation>	
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>updateCategory</from-outcome>
+			<to-view-id>/category/updateCategory.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule> 
+	
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>deleteCategory</from-outcome>
+			<to-view-id>/category/deleteCategory.xhtml</to-view-id>
+<!-- 			<redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>updateProduct</from-outcome>
+			<to-view-id>/product/updateProduct.xhtml</to-view-id>
+<!-- 			<redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>deleteProduct</from-outcome>
+			<to-view-id>/product/deleteProduct.xhtml</to-view-id>
+<!-- 			<redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>showCategory</from-outcome>
+			<to-view-id>/category/showCategory.xhtml</to-view-id>
+<!-- 			<redirect /> -->
+		</navigation-case>
+	</navigation-rule>
+</faces-config>

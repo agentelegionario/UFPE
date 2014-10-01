@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html" 
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	  xmlns:osms="http://java.sun.com/jsf/composite/osms">
+	<ui:composition template="/template.xhtml">
+		<ui:define name="title">Create a new Product</ui:define>
+		<ui:define name="content">
+		
+		<osms:menu actived1="active" actived2="inactive"
+			  name1="Create a Blog" name2="Search for a Blog"
+			  link1="../produc/newProduct.xhtml" link2="../product/searchProduct.xhtml" />
+		<body>
+			<h1 class="page-header">New Category</h1>
+			<h:form styleClass="form-horizontal">
+				<osms:productComp productCategory="newProduct"
+								  productNM="newProduct.product" 
+								  productDS="newProduct.product"
+								  productPrice="newProduct.product"
+								  product.Photo="newProduct.product"/>
+				 Category:
+				 <h:selectOneMenu styleClass="form-control"
+	    							 value="#{newProduct.categoryId}">
+	    							 <f:selectItem itemLabel="#{null}"></f:selectItem>
+	    				<f:selectItems value="#{newProduct.categories}" 
+	    								var="category"
+	    								itemLabel="#{category.name}"
+	    								itemValue="#{category.id}"
+	    								/>
+	    			</h:selectOneMenu>
+	    			<br />
+				 Product Name: 
+				<h:inputText value="#{newProduct.product.name}" />
+				<br />
+				Product Description: 
+				<h:inputTextarea value="#{newProduct.product.description}" />
+				<br />
+				Price: 
+				<h:inputText value="#{newProduct.product.price}" />
+				<br />
+				Photo:
+				<h:inputText value="#{newProduct.product.image}"></h:inputText>
+				<h:commandButton value="OK" action="#{newProduct.saveProduct}"/>
+				<br />
+			</h:form>
+			<h:messages>
+			</h:messages>
+		</body>
+		</ui:define>
+	</ui:composition>
+</html>

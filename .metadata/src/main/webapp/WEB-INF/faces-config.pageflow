@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14014980504520" configfile="/project.osms/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="562" id="pf14014981748771" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf14028807519191 pf14028807591564 pf14032331075250 pf14034746583770 pf14043447391560" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="category/NewCategory.xhtml" x="122" y="946" id="pf14028807519192" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" path="/category/NewCategory.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="category/deleteCategory.xhtml" x="338" y="178" id="pf14028807519193" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14028807519191" path="/category/deleteCategory.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="category/updateCategory.xhtml" x="338" y="562" id="pf14028807591565" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14028807591564" path="/category/updateCategory.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="product/NewProduct.xhtml" x="122" y="1330" id="pf14030585705401" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" path="/product/NewProduct.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="product/updateProduct.xhtml" x="338" y="946" id="pf14032331075291" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf14032331075250" path="/product/updateProduct.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="category/showCategory.xhtml" id="pf14034746583781" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf14034746583770" path="/category/showCategory.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="product/deleteProduct.xhtml" x="185" y="72" id="pf14043447391561" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf14043447391560" path="/product/deleteProduct.xhtml"/>
+  <links id="pf14028807519191" target="pf14028807519193" source="pf14014981748771"/>
+  <links id="pf14028807591564" target="pf14028807591565" source="pf14014981748771" outcome="updateCategory" redirect="true"/>
+  <links id="pf14032331075250" target="pf14032331075291" source="pf14014981748771"/>
+  <links id="pf14034746583770" target="pf14034746583781" source="pf14014981748771"/>
+  <links id="pf14043447391560" target="pf14043447391561" source="pf14014981748771"/>
+</pageflow:Pageflow>

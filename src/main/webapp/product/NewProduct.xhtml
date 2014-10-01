@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html" 
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	  xmlns:osms="http://java.sun.com/jsf/composite/osms">
+	  
+	<ui:composition template="/template.xhtml">
+		<ui:define name="title">Create a new Product</ui:define>
+		<ui:define name="content">
+		
+			<osms:menu actived1="active" actived2="inactive"
+				  name1="Insert Product" name2="Search Products"
+				  link1="../produc/newProduct.xhtml" link2="../product/searchProduct.xhtml" />
+			<body>
+				<h1 class="page-header">New Product</h1>
+				<h:form styleClass="form-horizontal">
+					<osms:productComp productCategory="#{newProduct}"
+									  product="#{newProduct.product}" />
+					<div class="col-sm-offset-2 col-sm-10">
+						<h:commandButton styleClass="btn btn-info" value="Save" action="#{newProduct.saveProduct}"/>
+					</div>
+				</h:form>
+				<br /><br />
+				<h:messages errorClass="list-group-item list-group-item-danger"
+					infoClass="list-group-item list-group-item-info"
+					warnClass="list-group-item list-group-item-warning"/>
+			</body>
+		</ui:define>
+	</ui:composition>
+</html>

@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [02/Sep/2014:22:33:47 -0300] "GET /project.osms/faces/index.xhtml HTTP/1.1" 404 1059 http-bio-9090-exec-1 299
+0:0:0:0:0:0:0:1 - - [02/Sep/2014:22:33:48 -0300] "GET /favicon.ico HTTP/1.1" 404 - http-bio-9090-exec-3 0
+0:0:0:0:0:0:0:1 - - [02/Sep/2014:22:34:03 -0300] "GET /project.osms/faces/index.xhtml HTTP/1.1" 404 1059 http-bio-9090-exec-4 4
+0:0:0:0:0:0:0:1 - - [02/Sep/2014:22:34:33 -0300] "GET /project.osms/ HTTP/1.1" 200 1932 http-bio-9090-exec-5 4
+0:0:0:0:0:0:0:1 - - [02/Sep/2014:22:34:33 -0300] "GET /project.osms/lib/bootstrap-3.1.1-dist/css/bootstrap.min.css HTTP/1.1" 200 99961 http-bio-9090-exec-7 20
+0:0:0:0:0:0:0:1 - - [02/Sep/2014:22:34:33 -0300] "GET /project.osms/lib/jquery.min.js HTTP/1.1" 200 96381 http-bio-9090-exec-6 29
+0:0:0:0:0:0:0:1 - - [02/Sep/2014:22:35:05 -0300] "GET /project.osms/faces/category/NewCategory.xhtml HTTP/1.1" 500 32719 http-bio-9090-exec-9 3353
+0:0:0:0:0:0:0:1 - - [02/Sep/2014:22:36:25 -0300] "GET /project.osms/faces/ HTTP/1.1" 500 2907 http-bio-9090-exec-1 246
+0:0:0:0:0:0:0:1 - - [02/Sep/2014:22:36:38 -0300] "GET /project.osms HTTP/1.1" 302 - http-bio-9090-exec-3 0
+0:0:0:0:0:0:0:1 - - [02/Sep/2014:22:36:43 -0300] "GET /project.osms/faces/category/NewCategory.xhtml HTTP/1.1" 500 32719 http-bio-9090-exec-6 3023
